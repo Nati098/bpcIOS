@@ -70,6 +70,7 @@
 
 - (IBAction)performOperationButtonDidTap:(UIButton *)button {
     self.brain.operand = [self displayValue];
+    self.brain.operator = button.titleLabel.text;
     double result = [self.brain performOperation];
     [self setResult:result];
     
@@ -77,6 +78,7 @@
 }
 
 - (IBAction)performCleaning:(UIButton *)button {
+    [self resetActiveOperationButtons];
     [self clear];
 }
 

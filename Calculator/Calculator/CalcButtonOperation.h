@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+IB_DESIGNABLE
 @interface CalcButtonOperation : UIButton
 
 @property (nonatomic, assign) BOOL isActive;

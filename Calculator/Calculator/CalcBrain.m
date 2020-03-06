@@ -14,7 +14,7 @@
     double result = 0;
     
     if ([self.operator isEqualToString:@"sqrt"]) {
-        result = sqrt(self.waitingOperand);
+        result = sqrt(self.operand);
     }
     else if ( !self.operator || self.operator.length == 0) {
         result = self.operand;

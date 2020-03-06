@@ -25,11 +25,7 @@
 }
 
 - (void)setColor {
-    if (self.isActive) {
-        self.layer.backgroundColor = [UIColor grayColor].CGColor;
-    } else {
-        self.layer.backgroundColor = [UIColor orangeColor].CGColor;
-    }
+    self.layer.backgroundColor = self.isActive ? [UIColor grayColor].CGColor : [UIColor orangeColor].CGColor ;
 }
 
 
