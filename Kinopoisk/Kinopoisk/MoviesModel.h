@@ -14,6 +14,8 @@
 
 @interface MoviesModel : NSObject
 
+- (void)loadMovies;
+
 - (MovieItem *)movieAtIndex:(NSInteger)index;
 - (NSUInteger)moviesCount; // UNSIGNED!
 

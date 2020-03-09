@@ -17,6 +17,10 @@
 
 @implementation MoviesModel
 
+- (void)loadMovies {
+    [self.loader loadMovies];
+}
+
 - (MovieItem *)movieAtIndex:(NSInteger)index{
     //at first check that idx not out of bounds.If so - return nil
     if (index > self.movies.count) {

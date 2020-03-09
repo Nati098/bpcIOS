@@ -20,6 +20,11 @@ static NSString *const kCellIdentifier = @"MovieCell";
 
 @implementation MoviesTableViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    [self.model loadMovies];
+}
+
 #pragma mark - Table view data source
 
 // if we delete this, it returns by default 1
@@ -30,9 +35,12 @@ static NSString *const kCellIdentifier = @"MovieCell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return [_model moviesCount];
+    return [self.model moviesCount];
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return  UITableViewAutomaticDimension;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MovieCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];

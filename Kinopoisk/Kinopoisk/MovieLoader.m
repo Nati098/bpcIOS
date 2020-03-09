@@ -31,6 +31,10 @@ static NSString *const kImageName = @"imageName";
     NSError *error = nil;
     id jsonObject = [NSJSONSerialization JSONObjectWithData:self.moviesData.jsonData options:0 error:&error];
     
+    if (error) {
+        NSLog(@"Error in loading");
+    }
+    
     if ([jsonObject isKindOfClass:[NSDictionary class]]){
         //if movies is a dict then we can do this:
         NSDictionary *obj = jsonObject;

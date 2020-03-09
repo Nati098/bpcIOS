@@ -25,7 +25,7 @@
         //set elements
         self.movieTitle = title;
         self.movieDescription = description;
-        _date = date;
+        self.date = date;
         _imageName = imageName; //2nd way to get self fields
     }
     
