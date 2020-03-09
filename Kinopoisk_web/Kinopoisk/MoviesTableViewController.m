@@ -41,7 +41,7 @@ static NSString *const kShowMovieSegue = @"ShowMovie";
         [weakSelf.tableView reloadData];
         [weakSelf.tableView.refreshControl endRefreshing];
     };
-    [_model loadMoviesWithCompletion:reloading];
+    [self.model loadMoviesWithCompletion:reloading];
 }
 
 #pragma mark - Table view data source
